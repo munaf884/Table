@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<style>
+    td,th{
+        border: 1px solid black;
+        font-size: 20px;
+        padding: 5px 10px;
+        justify-content: center;
+    }
+    #mathTable{
+        text-align: center;
+    }
+</style>
+<body>
+    <table id="mathTable">
+        <tr>
+            <td>2</td>
+            <td>x</td>
+            <td>1</td>
+            <td>=</td>
+            <td>2</td>
+        </tr>
+    </table>
+
+    <script>
+        let tr = " "
+        console.log("LOOP START")
+        for( let i=1; i<= 10; i++){
+            tr += `<tr><td>2</td><td>x</td><td>${i}</td><td>=</td><td>${2 * i}</td></tr>`
+        }
+        document.getElementById("mathTable").innerHTML = tr
+        console.log("LOOP END", tr)
+    </script>
+</body>
+</html>
